@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImIn</title>
+<meta name="description" content="Connect first. Meet for real. ImIn is a dating app for verified college students.">
+
+<style>
+  :root {
+    --bg: #000;
+    --white: #fff;
+    --tagline: #555;
+    --disclaimer: #333;
+    --secondary: #444;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+  }
+
+  body {
+    font-family: var(--font);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+  }
+
+  ::selection { background: var(--white); color: var(--bg); }
+
+  .screen {
+    width: 100%;
+    max-width: 560px;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8vh 28px 40px;
+  }
+
+  .top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    color: var(--white);
+    font-size: clamp(44px, 9vw, 64px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+    line-height: 1;
+  }
+
+  .tagline {
+    color: var(--tagline);
+    font-size: clamp(20px, 3.6vw, 26px);
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .disclaimer {
+    color: var(--disclaimer);
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 4px;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-primary {
+    background: var(--white);
+    color: var(--bg);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    transition: opacity 0.15s ease;
+  }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 3px;
+  }
+  .btn-primary.placeholder {
+    font-family: ui-monospace, "SF Mono", monospace;
+    font-weight: 500;
+    color: #767676;
+    letter-spacing: 0.01em;
+  }
+
+  .btn-secondary {
+    color: var(--secondary);
+    font-size: 14px;
+    text-align: center;
+    padding: 13px;
+    text-decoration: none;
+  }
+  .btn-secondary:hover { color: var(--tagline); }
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="screen">
+  <div class="top">
+    <h1>I'm In</h1>
+    <p class="tagline">Connect first.<br>Meet for real.</p>
+  </div>
+
+  <div class="bottom">
+    <p class="disclaimer">For college students. Verified .edu emails only.</p>
+    <div class="btn-primary placeholder">[ contact email ]</div>
+    <a class="btn-secondary" href="legal.html">Privacy &amp; Terms</a>
+  </div>
+</div>
+
+</body>
+</html>

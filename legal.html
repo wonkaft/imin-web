@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImIn Privacy &amp; Terms</title>
+<meta name="description" content="Privacy Policy and Terms of Service for ImIn.">
+
+<style>
+  :root {
+    --bg: #000;
+    --white: #fff;
+    --grey: #555;
+    --grey-dim: #333;
+    --rule: #1a1a1a;
+    --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--bg);
+  }
+
+  body {
+    font-family: var(--font);
+    color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+
+  ::selection { background: var(--white); color: var(--bg); }
+
+  a { color: var(--white); }
+  a:focus-visible, button:focus-visible {
+    outline: 1px solid var(--white);
+    outline-offset: 3px;
+  }
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 24px;
+    background: var(--bg);
+    border-bottom: 0.5px solid var(--rule);
+  }
+
+  .wordmark {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: -0.2px;
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .tabs {
+    display: flex;
+    gap: 20px;
+  }
+  .tab {
+    appearance: none;
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: 13px;
+    color: var(--grey);
+    padding: 0;
+    cursor: pointer;
+  }
+  .tab[aria-selected="true"] {
+    color: var(--white);
+  }
+
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 48px 24px 100px;
+  }
+
+  .doc { display: none; }
+  .doc.active { display: block; }
+
+  .doc-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--grey-dim);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.15;
+    margin: 0 0 10px;
+  }
+  .dek {
+    color: var(--grey);
+    font-size: 15px;
+    margin: 0 0 4px;
+    max-width: 48ch;
+  }
+  .meta {
+    font-size: 12px;
+    color: var(--grey-dim);
+    margin: 16px 0 0;
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    margin: 0 0 10px;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--grey);
+    margin: 16px 0 6px;
+  }
+
+  section.clause {
+    padding: 24px 0;
+    border-top: 0.5px solid var(--rule);
+  }
+
+  .summary {
+    padding: 24px 0;
+    border-top: 0.5px solid var(--rule);
+    border-bottom: 0.5px solid var(--rule);
+    margin: 28px 0 4px;
+  }
+
+  p { margin: 0 0 12px; max-width: 60ch; }
+  section.clause > p:last-child,
+  section.clause > ul:last-child,
+  .summary > ul:last-child { margin-bottom: 0; }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 1.1em;
+    max-width: 58ch;
+  }
+  li { margin-bottom: 6px; }
+
+  .placeholder {
+    color: var(--grey);
+  }
+
+  footer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px 24px 60px;
+    border-top: 0.5px solid var(--rule);
+    font-size: 12px;
+    color: var(--grey-dim);
+  }
+  footer a { color: var(--grey); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="wordmark" href="index.html">I'm In</a>
+  <div class="tabs" role="tablist" aria-label="Legal documents">
+    <button class="tab" id="tab-privacy" role="tab" aria-selected="true" aria-controls="doc-privacy">Privacy</button>
+    <button class="tab" id="tab-terms" role="tab" aria-selected="false" aria-controls="doc-terms">Terms</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============ PRIVACY POLICY ============ -->
+  <article class="doc active" id="doc-privacy" role="tabpanel" aria-labelledby="tab-privacy">
+    <p class="doc-eyebrow">Privacy Policy</p>
+    <h1>What we collect, and why</h1>
+    <p class="dek">ImIn is built for a small, verified community of college students. Here's plainly what that requires us to know about you.</p>
+    <p class="meta">Effective 2026-08-31 · Applies to the ImIn app and imin.app</p>
+
+    <div class="summary">
+      <h2>In short</h2>
+      <ul>
+        <li>We only take what the app needs to work: your .edu email, a profile you build yourself, messages with your match, and location only when you ask us to suggest a meetup spot.</li>
+        <li>We don't sell your data or run ads. Your info goes to the vendors that run our infrastructure (Supabase, Expo, Google Places) — never to a marketer.</li>
+        <li>Your match sees your profile and photo, revealed gradually as you talk. Everyone else sees nothing until you're matched.</li>
+        <li>You can permanently delete your account and everything tied to it, anytime, from Profile → Delete account.</li>
+      </ul>
+    </div>
+
+    <section class="clause">
+      <h2>1. Information we collect</h2>
+      <p>We collect what you give us directly, and a small amount generated by using the app.</p>
+
+      <h3>Account &amp; verification</h3>
+      <ul>
+        <li>Your college (.edu) email address, used to verify student status and as your login.</li>
+        <li>Your password, stored as a salted hash — we never see or store it in plain text.</li>
+      </ul>
+
+      <h3>Your profile</h3>
+      <ul>
+        <li>Display name and age</li>
+        <li>Interests, social style ("vibe"), and what you're looking for ("intent") — used to find your match</li>
+        <li>A profile photo you upload</li>
+      </ul>
+
+      <h3>Conversations</h3>
+      <ul>
+        <li>The content of messages you send to a match, and how many you've exchanged (this drives when your photo comes into focus)</li>
+      </ul>
+
+      <h3>Location</h3>
+      <p>Only requested when you open the Meetup screen after a match is confirmed. We use your device's current location, once, to suggest nearby public places to meet — we don't track or store a location history.</p>
+
+      <h3>Device &amp; notifications</h3>
+      <p>A push-notification token for your device, so we can alert you to new messages. It's tied to your account, not sold or shared beyond delivering your own notifications.</p>
+
+      <h3>Safety reports</h3>
+      <p>If you report or block another user, we keep a record of that report — who filed it, who it's about, and why — to review it and act on it.</p>
+    </section>
+
+    <section class="clause">
+      <h2>2. How we use it</h2>
+      <ul>
+        <li>Interests, vibe, intent — finding and scoring your match</li>
+        <li>Messages — delivering your conversation, and counting toward photo reveal</li>
+        <li>Location (one-time) — suggesting nearby meetup spots via Google Places</li>
+        <li>Push token — notifying you of new messages</li>
+        <li>Reports &amp; blocks — moderation, and keeping blocked users from re-matching</li>
+        <li>.edu email — confirming you're a verified student, and logging you in</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <h2>3. Who your information goes to</h2>
+      <p>We don't sell data, and we don't run advertising. Your information is only shared with the vendors that make the app run:</p>
+      <ul>
+        <li><strong>Supabase</strong> — hosts our database, authentication, and file storage.</li>
+        <li><strong>Expo</strong> — delivers push notifications to your device.</li>
+        <li><strong>Google Places API</strong> — receives your location, once per request, to return nearby meetup suggestions. Google's own privacy policy governs that lookup.</li>
+      </ul>
+      <p>We may also disclose information if required by law, or to protect the safety of our users.</p>
+    </section>
+
+    <section class="clause">
+      <h2>4. What your match can see</h2>
+      <p>ImIn is built around one match at a time, revealed gradually. Once you're matched, the other person can see your display name, age, interests, and vibe. Your photo starts blurred and sharpens as you message each other, fully revealing at 100 messages — or sooner if you both confirm you're in. Nobody outside an active match can see your profile or photo.</p>
+    </section>
+
+    <section class="clause">
+      <h2>5. How long we keep it</h2>
+      <p>An unconfirmed match automatically expires after 7 days of inactivity. Your profile, messages, and account data are kept as long as your account exists. If you're reported, we retain the report even if you later delete your account, so patterns of abuse remain visible to us.</p>
+    </section>
+
+    <section class="clause">
+      <h2>6. Your choices</h2>
+      <ul>
+        <li><strong>Delete your account</strong> — Profile → Delete account permanently and immediately erases your profile, matches, and messages. This can't be undone.</li>
+        <li><strong>Access or export your data</strong> — email us and we'll get it to you.</li>
+        <li><strong>Turn off notifications</strong> — from your device's system settings.</li>
+      </ul>
+    </section>
+
+    <section class="clause">
+      <h2>7. Who can use ImIn</h2>
+      <p>ImIn is for verified college students 18 and older. We don't knowingly collect information from anyone under 18, and the service isn't directed at children.</p>
+    </section>
+
+    <section class="clause">
+      <h2>8. Security</h2>
+      <p>We use industry-standard practices — encrypted connections, access controls scoped per user — to protect your data. ImIn is currently in closed beta; as with any early-stage service, we're continuing to harden our systems and will disclose any incident that affects your data.</p>
+    </section>
+
+    <section class="clause">
+      <h2>9. Changes to this policy</h2>
+      <p>If we make a material change to how we handle your data, we'll update the date at the top of this page and, where appropriate, notify you in the app.</p>
+    </section>
+
+    <section class="clause">
+      <h2>10. Contact</h2>
+      <p>Questions about this policy or your data: <span class="placeholder">[contact email]</span></p>
+    </section>
+  </article>
+
+  <!-- ============ TERMS OF SERVICE ============ -->
+  <article class="doc" id="doc-terms" role="tabpanel" aria-labelledby="tab-terms">
+    <p class="doc-eyebrow">Terms of Service</p>
+    <h1>The agreement, in plain terms</h1>
+    <p class="dek">Meeting someone new carries real-world risk. These terms exist to keep that risk honest, not to bury it in fine print.</p>
+    <p class="meta">Effective 2026-08-31 · Governed by the laws of Michigan, USA</p>
+
+    <div class="summary">
+      <h2>In short</h2>
+      <ul>
+        <li>You must be 18+ with a valid, current .edu email. One account per person.</li>
+        <li>Be honest and respectful. Harassment, fake profiles, and soliciting will get you reported, blocked, and removed.</li>
+        <li>We don't run background checks on anyone. Meeting in person is at your own risk — meet in public, tell a friend where you're going.</li>
+        <li>You can delete your account anytime; we can suspend accounts that break these terms.</li>
+      </ul>
+    </div>
+
+    <section class="clause">
+      <h2>1. Eligibility</h2>
+      <p>You must be at least 18 years old and able to verify current enrollment or affiliation with a college or university via a valid .edu email address. You may hold only one ImIn account.</p>
+    </section>
+
+    <section class="clause">
+      <h2>2. Your conduct</h2>
+      <p>By using ImIn, you agree not to:</p>
+      <ul>
+        <li>Post a photo or profile that isn't genuinely you</li>
+        <li>Harass, threaten, or bully another user</li>
+        <li>Impersonate someone else or misrepresent your age</li>
+        <li>Use ImIn for spam, solicitation, or commercial promotion</li>
+        <li>Contact, or attempt to contact, a user who has blocked you</li>
+      </ul>
+      <p>We rely on reports from the community to catch what we can't see. Reports are reviewed by our team, typically within 24 hours.</p>
+    </section>
+
+    <section class="clause">
+      <h2>3. Meeting in person — please read this one</h2>
+      <p>ImIn's whole premise is helping you move a conversation toward meeting in real life. We do not conduct criminal background checks or identity verification beyond your .edu email, and we cannot guarantee the identity, intentions, or conduct of any user.</p>
+      <p>When you decide to meet someone:</p>
+      <ul>
+        <li>Meet in a public place — the Meetup screen is built to suggest exactly that</li>
+        <li>Tell a friend where you're going and who you're meeting</li>
+        <li>Arrange your own transportation, both ways</li>
+        <li>Trust your instincts, and leave if something feels wrong</li>
+      </ul>
+      <p>ImIn is not liable for your interactions with other users, on or off the app.</p>
+    </section>
+
+    <section class="clause">
+      <h2>4. Your content</h2>
+      <p>You keep ownership of the photos and messages you post. By posting them, you give ImIn permission to store and transmit them as needed to run the service — for example, sending your message to your match. You're responsible for what you post, and it must not violate anyone else's rights or the law.</p>
+    </section>
+
+    <section class="clause">
+      <h2>5. Blocking, reporting, and enforcement</h2>
+      <p>Blocking someone ends any active match with them immediately and prevents you from being matched with them again — they aren't notified. We may warn, suspend, or permanently remove any account that violates these terms, at our discretion, with or without notice.</p>
+    </section>
+
+    <section class="clause">
+      <h2>6. Ending your account</h2>
+      <p>You can delete your account at any time from Profile → Delete account. This permanently removes your profile, matches, and messages, and can't be reversed. We may also suspend or terminate access for conduct that violates these terms.</p>
+    </section>
+
+    <section class="clause">
+      <h2>7. No warranty</h2>
+      <p>ImIn is currently offered as a closed beta, provided "as is," without warranties of any kind. Features, matching, and availability may change or break as we continue building. To the fullest extent the law allows, ImIn disclaims liability for damages arising from your use of the service, including your interactions with other users.</p>
+    </section>
+
+    <section class="clause">
+      <h2>8. Changes to these terms</h2>
+      <p>We may update these terms as the app evolves. Continuing to use ImIn after a change means you accept the update. Material changes will be reflected by the date at the top of this page.</p>
+    </section>
+
+    <section class="clause">
+      <h2>9. Contact</h2>
+      <p>Questions about these terms: <span class="placeholder">[contact email]</span></p>
+    </section>
+  </article>
+
+</main>
+
+<footer>
+  I'm In — for college students. Verified .edu emails only.
+</footer>
+
+<script>
+  (function () {
+    var tabPrivacy = document.getElementById('tab-privacy');
+    var tabTerms = document.getElementById('tab-terms');
+    var docPrivacy = document.getElementById('doc-privacy');
+    var docTerms = document.getElementById('doc-terms');
+
+    function show(which) {
+      var privacyOn = which === 'privacy';
+      docPrivacy.classList.toggle('active', privacyOn);
+      docTerms.classList.toggle('active', !privacyOn);
+      tabPrivacy.setAttribute('aria-selected', String(privacyOn));
+      tabTerms.setAttribute('aria-selected', String(!privacyOn));
+      window.scrollTo(0, 0);
+      try {
+        history.replaceState(null, '', which === 'privacy' ? '#privacy' : '#terms');
+      } catch (e) {}
+    }
+
+    tabPrivacy.addEventListener('click', function () { show('privacy'); });
+    tabTerms.addEventListener('click', function () { show('terms'); });
+
+    if (window.location.hash === '#terms') show('terms');
+  })();
+</script>
+</body>
+</html>
