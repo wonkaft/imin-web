@@ -3,8 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ImIn</title>
-<meta name="description" content="Connect first. Meet for real. ImIn is a dating app for verified college students.">
+<title>imin</title>
+<meta name="description" content="Connect first. Meet for real. imin is a dating app for verified college students.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Newsreader:ital,wght@1,600&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -51,13 +54,17 @@
   }
 
   h1 {
-    color: var(--white);
-    font-size: clamp(44px, 9vw, 64px);
-    font-weight: 600;
-    letter-spacing: -0.02em;
     margin: 0 0 20px;
     line-height: 1;
+    font-size: clamp(44px, 9vw, 64px);
   }
+
+  .wm-im, .wm-in {
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .wm-im { font-family: 'Archivo', var(--font); font-weight: 700; }
+  .wm-in { font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-style: italic; }
 
   .tagline {
     color: var(--tagline);
@@ -122,13 +129,13 @@
 
 <div class="screen">
   <div class="top">
-    <h1>I'm In</h1>
+    <h1><span class="wm-im">im</span><span class="wm-in">in</span></h1>
     <p class="tagline">Connect first.<br>Meet for real.</p>
   </div>
 
   <div class="bottom">
-    <p class="disclaimer">For college students. Verified .edu emails only.</p>
-    <a class="btn-primary" href="mailto:admin@imin-web.com?subject=ImIn%20beta%20invite">Request an invite</a>
+    <p class="disclaimer">For college students only.</p>
+    <a class="btn-primary" href="mailto:admin@imin-web.com?subject=imin%20beta%20invite">Request an invite</a>
     <a class="btn-secondary" href="legal.html">Privacy &amp; Terms</a>
   </div>
 </div>
