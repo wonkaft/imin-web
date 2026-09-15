@@ -269,6 +269,21 @@
   .mock-row-label { color: var(--grey-dim); }
   .mock-row-value { color: var(--white); font-weight: 500; }
 
+  /* Fall Pass mockup */
+  .mock-fallpass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+    border: 1px solid #caa15a;
+    background: linear-gradient(135deg, #4a3410, #241a08, #3a2a10);
+    box-shadow: 0 0 14px rgba(224,169,79,0.4);
+  }
+  .mock-fallpass-label { font-size: 10px; font-weight: 600; color: #e8c98a; }
+  .mock-fallpass-value { font-size: 9px; font-weight: 700; color: #f5e2b8; }
+
   /* Meetup mockup */
   .mock-place-card {
     display: flex;
@@ -283,19 +298,19 @@
   .mock-place-meta { font-size: 8px; color: var(--grey-dim); }
   .mock-go { font-size: 9px; font-weight: 600; }
 
-  /* Safety section */
-  .safety {
+  /* Safety / monetization / tech stack sections */
+  .safety, .monetization, .techstack {
     padding: 56px 0 72px;
     border-top: 0.5px solid var(--rule);
   }
-  .safety h2 {
+  .safety h2, .monetization h2, .techstack h2 {
     font-size: 24px;
     font-weight: 600;
     letter-spacing: -0.01em;
     margin: 0 0 8px;
     text-align: center;
   }
-  .safety > p {
+  .safety > p, .monetization > p, .techstack > p {
     color: var(--grey);
     font-size: 14px;
     text-align: center;
@@ -309,6 +324,18 @@
   }
   .safety-item h3 { font-size: 14px; font-weight: 600; margin: 0 0 6px; }
   .safety-item p { color: var(--grey); font-size: 12.5px; line-height: 1.55; margin: 0; }
+
+  .monetization-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .monetization-text { display: flex; flex-direction: column; gap: 24px; }
+  @media (min-width: 680px) {
+    .monetization-layout { flex-direction: row; align-items: center; gap: 48px; }
+    .monetization-text { flex: 1; }
+    .monetization .step-visual { flex: 1; }
+  }
 
   footer {
     max-width: 720px;
@@ -495,6 +522,45 @@
       </div>
     </section>
 
+    <section class="monetization">
+      <h2>How imin makes money</h2>
+      <p>Free to match and message. Revenue comes from optional semester passes for people who want more than the default pace.</p>
+      <div class="monetization-layout">
+        <div class="monetization-text">
+          <div class="safety-item">
+            <h3>Free, always</h3>
+            <p>Matching, messaging, and the whole one-match-at-a-time experience is free for everyone — that's the core product, not a limited trial.</p>
+          </div>
+          <div class="safety-item">
+            <h3>Semester Pass — $3.99</h3>
+            <p>A one-time purchase that unlocks 3 concurrent matches instead of 1, valid through the end of that semester — a Fall Pass and a Spring Pass, each sold separately. It's not a subscription and doesn't auto-renew, which gives us a natural, recurring purchase moment twice a year for every active user without the friction of a subscription commitment.</p>
+          </div>
+          <div class="safety-item">
+            <h3>Room to grow</h3>
+            <p>Longer-term: premium tiers with more features, and eventually paid placement for local businesses in our meetup suggestions once we have real usage data to offer them.</p>
+          </div>
+        </div>
+        <div class="step-visual">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-header">
+                <div class="wordmark"><span class="wm-im">im</span><span class="wm-in">in</span></div>
+              </div>
+              <div class="phone-body">
+                <div class="mock-fallpass">
+                  <div class="mock-fallpass-label">Fall Pass</div>
+                  <div class="mock-fallpass-value">Get it →</div>
+                </div>
+                <div class="mock-row"><div class="mock-row-label">University</div><div class="mock-row-value">WMU</div></div>
+                <div class="mock-row"><div class="mock-row-label">Here for</div><div class="mock-row-value">Dating</div></div>
+                <div class="mock-row"><div class="mock-row-label">Social style</div><div class="mock-row-value">Extrovert</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="safety">
       <h2>Built to be safe, not just fun</h2>
       <p>A dating app built for real students needs real safety, not an afterthought.</p>
@@ -514,6 +580,41 @@
         <div class="safety-item">
           <h3>Verified students only</h3>
           <p>Every account is tied to a real college email, keeping the community small, trusted, and genuine.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="techstack">
+      <h2>Tech stack</h2>
+      <p>What imin is actually built with.</p>
+      <div class="safety-grid">
+        <div class="safety-item">
+          <h3>App</h3>
+          <p>React Native (Expo), built and deployed to the App Store through Expo EAS.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Backend</h3>
+          <p>Supabase — Postgres, auth, file storage, realtime messaging, and Deno-based edge functions for custom server logic.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Payments</h3>
+          <p>RevenueCat and Apple StoreKit handle the Semester Pass purchase and entitlement tracking.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Location</h3>
+          <p>Google Places API powers the meetup suggestions between matched users.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Content safety (AI)</h3>
+          <p>Sightengine's AI models automatically screen every photo and message for nudity, hate speech, and threats before it reaches another user.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Email</h3>
+          <p>Resend handles transactional email — confirmations, password resets, and moderation alerts.</p>
+        </div>
+        <div class="safety-item">
+          <h3>Built with AI</h3>
+          <p>Claude Code (Anthropic's Claude Sonnet 5) has been used as an AI pair-programmer for the majority of the app's features, debugging, and infrastructure.</p>
         </div>
       </div>
     </section>
